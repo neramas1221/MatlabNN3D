@@ -42,9 +42,15 @@ for epoc=1:100
                     nodes(k,1) = inputs(1,1);
                     nodes(k,2) = inputs(2,1);
                     nodes(k,3) = inputs(3,1);
+                    nodes(k,5) = target;
                     % k-means nearest neighbers
                 end
             end
         end
     end
 end
+
+
+hold on
+plot(trainingData(:,4));
+hold off
