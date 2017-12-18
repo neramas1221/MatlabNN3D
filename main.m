@@ -1,5 +1,5 @@
-testingData = importdata('',',');
-trainingData = importdata('',',');
+%testingData = importdata('',',');
+trainingData = importdata('dataset.csv',',');
 sigma =0.3;
 nodes = zeros(80,5);
 
@@ -13,16 +13,17 @@ for i =1:80
     nodes(i,4) = 0;
     nodes(i,5) = 1;
 end
-netOutput = zeros(X,1);
+netOutput = zeros(Y,1);
+nodeRecruted =0;
 for epoc=1:100
-    for i=1:X
+    for i=1:Y
         
-        inputs = trainingData(i,1);
-        inputs = trainingData(i,2);
-        inputs = trainingData(i,3);
+        inputs(1,1) = trainingData(i,1);
+        inputs(2,1) = trainingData(i,2);
+        inputs(3,1) = trainingData(i,3);
         target = trainingData(i,4);
         
-        [netoutPut,nodes] = calculateNetwork(nodes,input,sigma);
+        [netoutPut,nodes] = calculateNetwork(nodes,inputs,sigma);
         
         netOutput(i,1) = netoutPut;
         
