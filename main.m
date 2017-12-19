@@ -1,6 +1,6 @@
 %testingData = importdata('',',');
 trainingData = importdata('dataset.csv',',');
-sigma =0.3;
+sigma = 0.3;
 [X,Y] = size(trainingData);
 nodes = zeros(X,5);
 inputs = zeros(3,1);
@@ -12,9 +12,14 @@ for i =1:X
     nodes(i,4) = 0;
     nodes(i,5) = 1;
 end
+loopCount =5;
 netOutputArray = zeros(X,1);
 nodeRecruted =0;
-for epoc=1:5
+
+error = zeros(loopCount,1);
+
+for epoc=1:loopCount
+    
     for i=1:X
         
         inputs(1,1) = trainingData(i,1);
@@ -49,10 +54,15 @@ for epoc=1:5
             end
         end
     end
+    error(epoc,1) = errorCalculation(trainingData,netOutputArray);
     fprintf("epoc number : %d complete\n",epoc);
 end
+figure(1)
+hold on 
+plot(error,'b-');
+hold off
 
-
+figure(2)
 hold on
 plot(trainingData(:,1)*364,trainingData(:,4));
 plot(trainingData(:,1)*364,netOutputArray(:,1),'g');
