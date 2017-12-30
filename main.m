@@ -1,14 +1,14 @@
 testingData = importdata('data\2016_hourly.csv',',');
-trainingData = importdata('data\2012_hourly.csv',',');
+trainingData = importdata('data\2015_hourly.csv',',');
 
 [X,Y] = size(trainingData);
 [testX, testY] = size(testingData);
-num = floor(X/4);
+num = floor(X);
 [id,centers] = kmeans(trainingData(:,1:end-1),num);
 
 [centerX, centerY] = size(centers);
 
-sigma = 0.2;
+sigma = 0.8;
 
 %nodes = zeros(X,5);
 
@@ -24,10 +24,10 @@ for i =1:centerX
     nodes(i,2) = centers(i,2);
     nodes(i,3) = centers(i,3);
     nodes(i,4) = 0;
-    nodes(i,5) = rand(1);
+    nodes(i,5) = 1; %rand(1);
 end
 
-loopCount = 20;
+loopCount = 100;
 
 netOutputArray = zeros(X,1);
 netOutputTest = zeros(testX,1);
