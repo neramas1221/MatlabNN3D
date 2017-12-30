@@ -1,0 +1,59 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+\title{Using Normalised Radial Based Functions (NRBF's) to Prodict Energy Consumption in the National Grid}
+\author{Connor Wheeler}
+\date{11/01/2018}
+
+\begin{document}
+\pagenumbering{arabic}
+
+\maketitle
+
+%\tableofcontents
+\newpage
+\section{Introduction}
+\section{Network}
+\subsection{NRBF}
+\begin{center}
+  Node Activation Equation
+\end{center}
+$$y=exp(-\frac{1}{2\sigma^2} \sum_{k=1}^{K}(x_{k} - w_{jk})^2) $$
+\begin{center}
+  Root Mean Squar Equation
+\end{center}
+$$RMS =\sqrt{\frac{1}{M}\sum_{i=1}^{M}(y^{p}_{i} - y^{p}_{id})^2} $$
+\begin{center}
+Weight Update Equation
+\end{center}
+$$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
+\subsubsection{Task 1}
+\begin{center}
+\begin{tabular}{||c c c||}
+  \hline
+Sigma Value & Train Error & Test Error \\ [0.5ex]
+\end{tabular}
+\end{center}
+\subsubsection{Tast 2}
+\begin{center}
+\begin{tabular}{||c c c||}
+  \hline
+Number of Nodes & Train Error & Test Error \\ [0.5ex]
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{||c c c||}
+  \hline
+Sigma Value & Train Error & Test Error \\ [0.5ex]
+\end{tabular}
+\end{center}
+\subsection{MLP}
+\subsubsection{Task 2}
+\section{Data}
+\subsection{Data processing methods}
+\subsection{Problems with the data}
+\section{results}
+\section{conclution}
+\end{document}

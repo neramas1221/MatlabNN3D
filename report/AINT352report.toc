@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {I}Introduction}{1}
+\contentsline {section}{\numberline {II}Network}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}NRBF}{1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}1}Task 1}{1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}2}Tast 2}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}MLP}{1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}1}Task 2}{1}
+\contentsline {section}{\numberline {III}Data}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Data processing methods}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Problems with the data}{1}
+\contentsline {section}{\numberline {IV}results}{1}
+\contentsline {section}{\numberline {V}conclution}{1}
