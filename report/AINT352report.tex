@@ -15,8 +15,64 @@
 %\tableofcontents
 \newpage
 \section{Introduction}
+\begin{flushleft}
+    Training a Neural Network to prodict the energy Consumptions of the national was not the easiest of tasks
+    for the network to proform. There a number of intrsting occurances in the data, the output of the network and
+    the results of the sigma optimisation and node optimisation.
+\end{flushleft}
 \section{Network}
 \subsection{NRBF}
+\begin{flushleft}
+  Normalised Radial Based Functions (NRBF) work by using the activation of all nodes in the hidden
+  layer to work out the output of the network. This is done by using the gaussian activation function
+  of the nodes in the hidden layer, to work out how active the node is when a value is passed to it.
+  if a node is very then its activation value will be one or very close to one, where as an inactive
+  node will be much closer to zero. The activation of all of the nodes is later used to work out what
+  the output of the net work will be.
+\end{flushleft}
+
+\begin{flushleft}
+  When the activation has been calculated this can then be used to to get the output of the network
+  as the more active nodes will contribute more to the final value that is output based on these inputs.
+  To do this the the sum of the nodes weights multipied by the activation of the node is calculated.
+  This part of the equaction can be seen in figure 1:
+  \vspace{3mm}
+
+  $$\sum_{n=1}^{N}W _n\phi(\|x-x_n\|) $$
+  \\
+  \vspace{1.5mm}
+
+  {\footnotesize figure 1 : sum of all node activations multipied by weights of all nodes}
+
+  \vspace{3mm}
+  After this the total sum of all node activations is calculated and summed. The equation for this
+  can be seen figure 2.
+
+  \vspace{3mm}
+
+  $$\sum_{n=1}^{N}\phi(\|x-x_n\|) $$
+  \\
+  \vspace{1.5mm}
+
+  {\footnotesize figure 2 : sum of all node activations}
+  \\
+  \vspace{3mm}
+  When these have been calculated the 2 values are devided. to get the final output from the
+  hidden layer. The whole equation can been seen in figure 3.
+
+  \vspace{3mm}
+
+  $$f(x)=\frac{\sum_{n=1}^{N}W _n\phi(\|x-x_n\|)}{\sum_{n=1}^{N}\phi(\|x-x_n\|)}$$
+  \\
+  \vspace{1.5mm}
+
+  {\footnotesize figure 3 : sum of all node activations multipied by weights of all nodes
+  devided by sum of all node activations}
+  \\
+  \vspace{3mm}
+
+\end{flushleft}
+
 \begin{center}
   Node Activation Equation
 \end{center}
@@ -34,6 +90,17 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
 \begin{tabular}{||c c c||}
   \hline
 Sigma Value & Train Error & Test Error \\ [0.5ex]
+\hline
+0.1 \\
+0.2 \\
+0.3 \\
+0.4 \\
+0.5 \\
+0.6 \\
+0.7 \\
+0.8 \\
+0.9 \\
+1.0 \\
 \end{tabular}
 \end{center}
 \subsubsection{Tast 2}
@@ -47,6 +114,16 @@ Number of Nodes & Train Error & Test Error \\ [0.5ex]
 \begin{tabular}{||c c c||}
   \hline
 Sigma Value & Train Error & Test Error \\ [0.5ex]
+0.1 \\
+0.2 \\
+0.3 \\
+0.4 \\
+0.5 \\
+0.6 \\
+0.7 \\
+0.8 \\
+0.9 \\
+1.0 \\
 \end{tabular}
 \end{center}
 \subsection{MLP}
