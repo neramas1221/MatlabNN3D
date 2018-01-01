@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1514666880 "AINT352report.tex" "AINT352report.pdf" "AINT352report" 1514666881
-  "AINT352report.aux" 1514666881 1110 4ad3e18f5699de72a2c64ab0e2f7c541 ""
-  "AINT352report.tex" 1514666880 3835 2c9070ffa18c553856b08bcf35fdb114 ""
+["pdflatex"] 1514819489 "AINT352report.tex" "AINT352report.pdf" "AINT352report" 1514819505
+  "AINT352report.aux" 1514819489 1110 e196e85f267b9a347613cf011c97217e ""
+  "AINT352report.tex" 1514819505 6997 f95a6fc8fd835a66953c43b6374f5820 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136772254 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -54,10 +54,13 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ot1ptm.fd" 1137114230 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/cwheeler/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1514657823 4061332 fc65053e07808bc866e9817e02dd2257 ""
   "C:/Users/cwheeler/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1514657702 80423 3cfba73105275d3ad410701d89fbdf7a ""
+  "Errorplottask1.jpg" 1514811324 27489 c259eea6b39b45672fcc9586abd14121 ""
+  "NNfunctiontask1.jpg" 1514811334 23183 a194cb45b0ba6404781c4d017e2146ae ""
+  "NNstepfunction.jpg" 1514811372 22604 16c7219180753a42bb341188cc5b6dd0 ""
   (generated)
-  "AINT352report.pdf"
   "AINT352report.lot"
-  "AINT352report.toc"
+  "AINT352report.pdf"
   "AINT352reportNotes.bib"
+  "AINT352report.toc"
   "AINT352report.aux"
   "AINT352report.log"

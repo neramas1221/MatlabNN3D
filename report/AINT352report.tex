@@ -76,16 +76,103 @@
 \begin{center}
   Node Activation Equation
 \end{center}
+\begin{flushleft}
+  The node activation equation is used to calculated the activation of the node. if the value before
+  the exponential is calculated is 0 then the activation of the node will be 1.
+\end{flushleft}
 $$y=exp(-\frac{1}{2\sigma^2} \sum_{k=1}^{K}(x_{k} - w_{jk})^2) $$
 \begin{center}
   Root Mean Squar Equation
 \end{center}
+\begin{flushleft}
+  The Root Mean Square equation is used to calculated how incorrect the network was with its outout. This was
+  used to comapar diffrent sigmas to see which has profomed the best on the testing data set.
+\end{flushleft}
 $$RMS =\sqrt{\frac{1}{M}\sum_{i=1}^{M}(y^{p}_{i} - y^{p}_{id})^2} $$
 \begin{center}
 Weight Update Equation
 \end{center}
+\begin{flushleft}
+  The weight update equation is used to adjust the weights in the hidden layer. This will allow the network to
+  become more accurate over time as the weights get adjusted more and more, as the network becomes more accurate
+  these adjustments become smaller. To do this the old weight is added to using the learning rate ($\alpha$) multipied
+  by the target value - the networks output, multipied by the activation of the node ($\phi$).
+\end{flushleft}
 $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
 \subsubsection{Task 1}
+\begin{flushleft}
+ For task one an NRBF was made to work on a small and evanly distributed data set, to get the understanding of the network
+ and the maths correct. To make sure the network was working correctly the sigma was set to 0.01 to see the step of the
+ network function. this can be seen in figure 7. This was useful as it allowed to check if the network was working and
+ was covering all of the traing data points with the network function.
+ \vspace{1.5mm}
+\\
+\vspace{1.5mm}
+\begin{center}
+  Network function with a sigma of 0.01
+\end{center}
+\includegraphics[scale = 0.35]{NNstepfunction.jpg}
+\vspace{1.5mm}
+{\footnotesize figure 7 : Network function when sigma is 0.01 }
+\\
+\vspace{1.5mm}
+\end{flushleft}
+\begin{flushleft}
+  Once the network was working properly, the sigma optimiation could begin to see which sigma would be best to use for the
+  network. To do this the network was run over the data set 100 times and then the final test and train error where taken and
+  stored. This allowed for the best value on the testing data to be found. The sigma was tested between 0.1 - 1 and the table
+  of results can be seen in figure 10. The best sigma value that could be found from this testing was 0.9 as it had the lowest
+  test error of all of the value tried with a error value of 0.0915. The error graph and network function graph for this sigma
+  can be seen in figure 8 and 9.
+  \\
+\vspace{1.5mm}
+\begin{center}
+  Error plot for a sigma of 0.9
+\end{center}
+\vspace{1.5mm}
+\includegraphics[scale = 0.35]{Errorplottask1.jpg}
+\vspace{1.5mm}
+{\footnotesize figure 8 : error plot for the network with sigma 0.9 }
+\\
+\vspace{1.5mm}
+\begin{center}
+  Network function plot for a sigma of 0.9
+\end{center}
+\includegraphics[scale = 0.35]{NNfunctiontask1.jpg}
+\vspace{1.5mm}
+{\footnotesize figure 9 : Network function when sigma is 0.9 }
+\\
+\vspace{1.5mm}
+\end{flushleft}
+\begin{center}
+\begin{tabular}{||c c c||}
+  \hline
+Sigma Value & Train Error & Test Error \\ [0.5ex]
+\hline
+0.1 & 0.2733e-16 & 0.1005\\
+0.2 & 2.0126e-10 & 0.1016\\
+0.3 & 1.3562e-4 & 0.1094\\
+0.4 & 0.0131 & 0.1161 \\
+0.5 & 0.0439 & 0.1073 \\
+0.6 & 0.0632 & 0.0983\\
+0.7 & 0.0730 & 0.0933\\
+0.8 & 0.0781 & 0.0919\\
+0.9 & 0.0797 & 0.0915\\
+1.0 & 0.0800 & 0.0918\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1.5mm}
+{\footnotesize figure 10 : Sigma optimisation table }
+\\
+\vspace{1.5mm}
+\subsubsection{Tast 2}
+\begin{center}
+\begin{tabular}{||c c c||}
+  \hline
+Number of Nodes & Train Error & Test Error \\ [0.5ex]
+\end{tabular}
+\end{center}
 \begin{center}
 \begin{tabular}{||c c c||}
   \hline
@@ -101,29 +188,7 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
 0.8 \\
 0.9 \\
 1.0 \\
-\end{tabular}
-\end{center}
-\subsubsection{Tast 2}
-\begin{center}
-\begin{tabular}{||c c c||}
-  \hline
-Number of Nodes & Train Error & Test Error \\ [0.5ex]
-\end{tabular}
-\end{center}
-\begin{center}
-\begin{tabular}{||c c c||}
-  \hline
-Sigma Value & Train Error & Test Error \\ [0.5ex]
-0.1 \\
-0.2 \\
-0.3 \\
-0.4 \\
-0.5 \\
-0.6 \\
-0.7 \\
-0.8 \\
-0.9 \\
-1.0 \\
+\hline
 \end{tabular}
 \end{center}
 \subsection{MLP}
