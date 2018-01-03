@@ -167,6 +167,39 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
 \\
 \vspace{1.5mm}
 \subsubsection{Tast 2}
+
+\begin{flushleft}
+  For task 2 a NRBF that could prodict the output of the national grid need to be made.
+  This network would be much larger and more complex then the first one due to the fact that more
+  data points would exist. When first creating and testing the network a node was used for each
+  data point to check that every thing was working correctly, but this was not the best practice
+  as some data points where very similer and could fit under one NRBF node.
+  \\
+  \vspace{2.5mm}
+  So to lower the amount of nodes used in the hidden layer but still ensure that the nodes where
+  evenly distributed K-means clustering was use to seperate the data in to sets of clusters and then
+  create the nodes. This meant that the number of nodes used would always be able cover the whole data set.
+  This then allowed for testing in the form of node optimiation and sigma optimiation to get a much more
+  efficent network. To get the number of nodes the total size of the data set is devided by a set number
+  and that many nodes centers are then created. These node centers then used to set the senters of each node.
+  As this network is a 3 dimensional network each node will be given 3 senters and have 3 input weight.
+  \\
+  \vspace{2.5mm}
+  After the nodes have been created the input values are looped through by the network and each one is tested.
+  After a data point has been tested the weights are updated and another data point is tested, after all the data point
+  have been tested another epoc is run going through the data points again. This is done 100 times to allow
+  for the larger sigmas to be trained by the network. The years 2012-2015 are used to train the network then the 2016
+  data set is used for testing the network. 2017 data set is used to valade the network profomace.
+  \\
+  \vspace{2.5mm}
+  The network was trained accross all of the traning sets to allow for the network to be trained on all of the data
+  available over those years and tested after each epoc. To ensure that the network was fully propared for the
+  final valadation data set.
+
+  The graphs for all of this can be seen in the results section of this report
+
+\end{flushleft}
+
 \begin{center}
 \begin{tabular}{||c c c||}
   \hline
@@ -196,6 +229,14 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
 \section{Data}
 \subsection{Data processing methods}
 \subsection{Problems with the data}
+\begin{flushleft}
+  When processing the datat there was a large array of problems that occured. Some of the years of data where not
+  complete and where missing entries over the year. Along with this the data reading where not always evenly sampled
+  meaning some reading are very close to other where as others are very spaced apart. This is a very large problem when
+  it comes to tring to make the network as accurate as possiable as the data might not refflect the heigh demands that
+  could of occured during the time of the reading. Along with this the data is sampled every 5 minutes, so to make the
+  network as accurate as possiable data would need to be taken more frequantly and used to train the network.
+\end{flushleft}
 \section{results}
 \section{conclution}
 \end{document}

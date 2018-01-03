@@ -8,7 +8,7 @@ num = floor(X);
 
 [centerX, centerY] = size(centers);
 
-sigma = 0.8;
+sigma = 0.3;
 
 %nodes = zeros(X,5);
 
@@ -35,7 +35,10 @@ nodeRecruted =0;
 
 error = zeros(loopCount,1);
 errorTest = zeros(loopCount,1);
-for epoc=1:loopCount
+for dataLoop=1:4
+  [trainingData,X] = changeDataset(dataLoop);
+  netOutputArray = zeros(X,1);
+  for epoc=1:loopCount
     
     for i=1:X
         
@@ -85,6 +88,7 @@ for epoc=1:loopCount
         netOutputTest(i,1) = netoutPut;
     end
     errorTest(epoc,1) = errorCalculation(testingData,netOutputTest);
+  end
 end
 
 figure(1)
@@ -92,9 +96,18 @@ hold on
 plot(error,'b-');
 plot(errorTest,'r-');
 hold off
+legend('Training error','Test error')
 
 figure(2)
 hold on
-plot(trainingData(:,1)*364,trainingData(:,4));
-plot(trainingData(:,1)*364,netOutputArray(:,1),'g');
+plot(trainingData(:,1)*364,trainingData(:,4)*10000);
+plot(trainingData(:,1)*364,netOutputArray(:,1)*10000,'g');
 hold off
+legend('Training Target','Network Output')
+
+figure(3)
+hold on
+plot(testingData(:,1)*364,testingData(:,4));
+plot(testingData(:,1)*364,netOutputTest(:,1),'g');
+hold off
+legend('Testing Target','Network Testing Output')
