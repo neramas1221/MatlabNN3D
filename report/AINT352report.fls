@@ -1,5 +1,5 @@
-PWD C:/Users/cwheeler/Documents/GitHub/MatlabNN3D/report
-INPUT C:/Users/cwheeler/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+PWD C:/Users/lilko/Documents/GitHub/MatlabNN3D/report
+INPUT C:/Users/lilko/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
 INPUT AINT352report.tex
 OUTPUT AINT352report.log
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ieeetran/IEEEtran.cls
@@ -116,7 +116,7 @@ INPUT ./NNstepfunction.jpg
 INPUT ./NNstepfunction.jpg
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr7t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT C:/Users/cwheeler/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT C:/Users/lilko/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr7t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr7t.vf

@@ -1,5 +1,5 @@
-testingData = importdata('data\2016_hourly.csv',',');
-trainingData = importdata('data\2015_hourly.csv',',');
+testingData = importdata('data\2016 Data set.csv',',');
+trainingData = importdata('data\2012 Data set.csv',',');
 
 [X,Y] = size(trainingData);
 [testX, testY] = size(testingData);
@@ -8,7 +8,7 @@ num = floor(X);
 
 [centerX, centerY] = size(centers);
 
-sigma = 0.3;
+sigma = 0.9;
 
 %nodes = zeros(X,5);
 
@@ -36,7 +36,7 @@ nodeRecruted =0;
 error = zeros(loopCount,1);
 errorTest = zeros(loopCount,1);
 for dataLoop=1:4
-  [trainingData,X] = changeDataset(dataLoop);
+ [trainingData,X] = changeDataset(dataLoop);
   netOutputArray = zeros(X,1);
   for epoc=1:loopCount
     
@@ -51,28 +51,8 @@ for dataLoop=1:4
         
         netOutputArray(i,1) = netoutPut;
         
-%         for j =1:centerX %X
-%             center(1,1) = nodes(j,1);
-%             center(2,1) = nodes(j,2);
-%             center(3,1) = nodes(j,3);
-            %if center == inputs
-                nodes = updateWeights(netoutPut,nodes,target);
-               % nodeRecruted = 1;
-            %end
-        %end
         
-%         if nodeRecruted == 0
-%             for k=1:X
-%                 if nodes(k,1) == 9999
-%                     nodes(k,1) = inputs(1,1);
-%                     nodes(k,2) = inputs(2,1);
-%                     nodes(k,3) = inputs(3,1);
-%                     nodes(k,5) = target;
-%                     break;
-%                     % k-means nearest neighbers
-%                 end
-%             end
-%         end
+        nodes = updateWeights(netoutPut,nodes,target);
     end
     error(epoc,1) = errorCalculation(trainingData,netOutputArray);
     fprintf("epoc number : %d complete\n",epoc);
@@ -100,14 +80,14 @@ legend('Training error','Test error')
 
 figure(2)
 hold on
-plot(trainingData(:,1)*364,trainingData(:,4)*10000);
-plot(trainingData(:,1)*364,netOutputArray(:,1)*10000,'g');
+plot(trainingData(:,1)*365,trainingData(:,4)*100000);
+plot(trainingData(:,1)*365,netOutputArray(:,1)*100000,'g');
 hold off
 legend('Training Target','Network Output')
 
 figure(3)
 hold on
-plot(testingData(:,1)*364,testingData(:,4));
-plot(testingData(:,1)*364,netOutputTest(:,1),'g');
+plot(testingData(:,1)*365,testingData(:,4)*100000);
+plot(testingData(:,1)*365,netOutputTest(:,1)*100000,'g');
 hold off
 legend('Testing Target','Network Testing Output')

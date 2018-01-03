@@ -228,6 +228,20 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
 \subsubsection{Task 2}
 \section{Data}
 \subsection{Data processing methods}
+\begin{flushleft}
+  For the network to use the data the avarge demand over each hour was taken and stored
+  along with the day of the year, hour of day and the day of the week. This data was then
+  normalised to be used in the network, to normalised the day the value would be devided by
+  365. For example the first day of the year would be $1 / 365$. To normalised the hour the
+  hour of the day was taken and then devided by 24. Finally the day of the week was devided
+  by 7 to get a normalised set of numbers between 0 and 1.
+  \\
+  \vspace{1.5mm}
+  Along with this the data processing could not factor in some of the data in the network, like
+  the large spikes that occure from time to time and the leep years that also occure. These could
+  of been factor in but then would also would of need to be factored in to the network when traning
+  leading to more problems.
+\end{flushleft}
 \subsection{Problems with the data}
 \begin{flushleft}
   When processing the datat there was a large array of problems that occured. Some of the years of data where not
@@ -236,6 +250,16 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
   it comes to tring to make the network as accurate as possiable as the data might not refflect the heigh demands that
   could of occured during the time of the reading. Along with this the data is sampled every 5 minutes, so to make the
   network as accurate as possiable data would need to be taken more frequantly and used to train the network.
+  \\
+  \vspace{1.5mm}
+  Along with this some years will be leep years leading to the problem of there being 1 extra day for the network to
+  learn that is not consistenly there. This could be factored in to the network but would most likely only make a miner
+  changer to the networks proformance. Along with this there are spikes in the data where large world events had taken
+  place or large sports events had taken place, this meant that more power was need and used as a result.
+  This could be factored in to the network but there are so many edge cases and events that can not be prodicted that
+  it would mostlikely hinder rather then help the network to learn. Along with this cancelation of events or events only
+  running every few years e.g. the Olympics would also need to be factored in and might lead to more energy being in the
+  grid then is need.
 \end{flushleft}
 \section{results}
 \section{conclution}
