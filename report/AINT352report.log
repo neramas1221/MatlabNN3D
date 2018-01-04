@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  3 JAN 2018 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  4 JAN 2018 14:39
 entering extended mode
 **./AINT352report.tex
 (AINT352report.tex
@@ -590,50 +590,53 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
-<NNstepfunction.jpg, id=1, 702.625pt x 526.96875pt>
-File: NNstepfunction.jpg Graphic file (type jpg)
-<use NNstepfunction.jpg>
-Package pdftex.def Info: NNstepfunction.jpg  used on input line 114.
-(pdftex.def)             Requested size: 245.92242pt x 184.44182pt.
- [1{C:/Users/lilko/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+) [1{C:/Users/lilko/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+<NNstepfunction.jpg, id=13, 702.625pt x 526.96875pt>
+File: NNstepfunction.jpg Graphic file (type jpg)
+<use NNstepfunction.jpg>
+Package pdftex.def Info: NNstepfunction.jpg  used on input line 117.
+(pdftex.def)             Requested size: 245.92242pt x 184.44182pt.
 <Errorplottask1.jpg, id=14, 702.625pt x 526.96875pt>
 File: Errorplottask1.jpg Graphic file (type jpg)
 <use Errorplottask1.jpg>
-Package pdftex.def Info: Errorplottask1.jpg  used on input line 133.
+Package pdftex.def Info: Errorplottask1.jpg  used on input line 136.
 (pdftex.def)             Requested size: 245.92242pt x 184.44182pt.
 <NNfunctiontask1.jpg, id=15, 702.625pt x 526.96875pt>
 File: NNfunctiontask1.jpg Graphic file (type jpg)
 <use NNfunctiontask1.jpg>
-Package pdftex.def Info: NNfunctiontask1.jpg  used on input line 141.
+Package pdftex.def Info: NNfunctiontask1.jpg  used on input line 144.
 (pdftex.def)             Requested size: 245.92242pt x 184.44182pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>] [3]
+ [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>] [3] 
+[4
+
+]
 (AINT352report.aux) ) 
 Here is how much of TeX's memory you used:
- 3172 strings out of 493308
- 46829 string characters out of 3138767
- 116820 words of memory out of 3000000
- 6696 multiletter control sequences out of 15000+200000
- 32336 words of font info for 63 fonts, out of 3000000 for 9000
+ 3187 strings out of 493308
+ 46972 string characters out of 3138767
+ 117820 words of memory out of 3000000
+ 6704 multiletter control sequences out of 15000+200000
+ 34609 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,25p,282b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,6n,25p,282b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
-mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AINT352report.pdf (3 pages, 171481 bytes).
+.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on AINT352report.pdf (4 pages, 182641 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

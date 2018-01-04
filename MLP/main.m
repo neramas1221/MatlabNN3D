@@ -1,10 +1,11 @@
-targetData = importdata('data\2012 Data set.csv',',');
+testData = importdata('data\2012 Data set.csv',',');
 trainingData = importdata('data\2013 Data set.csv',',');
 
 [X,Y] = size(trainingData);
+[testX,testY] = size(testData);
 learningRate =0.3;
 
-hiddenNodeSize =X;
+hiddenNodeSize =X/4;
 
 inputWeights = rand(4,hiddenNodeSize);
 inputWeights(4,:) = 1;
@@ -14,8 +15,9 @@ outputWeight(4,:) = 1;
 
 inputs = zeros(4,1);
 outputValues = zeros(X,1);
-
-
+outputTestValues = zeros(X,1);
+error = zeros(100,1);
+errorTest = zeros(100,1);
 
 for epocs =1:100
     for i=1:X
@@ -38,6 +40,30 @@ for epocs =1:100
         inputWeights = inputWeights - learningRate * d;
         outputWeight = outputWeight - learningRate * da;
     end
+    
+    for i=1:testX
+        inputs(1,1) = testData(i,1);
+        inputs(2,1) = testData(i,2);
+        inputs(3,1) = testData(i,3);
+        % off set for the bias node
+        inputs(4,1) = 1;
+        target = testData(i,4);
+        
+        aTwo = 1/(1+exp(- inputWeights' * inputs));
+        aTwo = aTwo';
+        output = 1/(1+exp(- outputWeight' * aTwo));
+        output = sum(output);
+        outputTestValues(i,1) = output;
+%         dThree = -(target - output) .* output .* (1-output);
+%         dTwo = dThree .* outputWeight .* aTwo .*(1-aTwo);
+%         d = dTwo' .* inputs;
+%         da = dThree .* aTwo;
+%         inputWeights = inputWeights - learningRate * d;
+%         outputWeight = outputWeight - learningRate * da;
+    end
+    
+    error(epocs,1) = calculateError(trainingData,outputValues);
+    errorTest(epocs,1) = calculateError(testData,
     fprintf("epoc count : %d\n",epocs);
 end
 
@@ -46,23 +72,7 @@ hold on
 plot(trainingData(:,1)*365,trainingData(:,4)*100000);
 plot(trainingData(:,1)*365,outputValues(:,1)*100000,'g');
 hold off
-
-% for epocs =1:100
-%    for i=1:X
-%     inputs(1,1) = trainingData(i,1);
-%     inputs(2,1) = trainingData(i,2);
-%     inputs(3,1) = trainingData(i,3);
-%     % off set for the bias node
-%     inputs(4,1) = 1;
-%     target = trainingData(i,4);
-%     y = inputs .* inputWeights;
-%     o = 1/1+exp(y);
-%     output = sum(o);
-%     outputValues(i,1) = output;
-%     inputWeights = updateWeights(output,target,learningRate,inputWeights,inputs);
-%    end 
-%    fprintf("epoc count : %d\n",epocs);
-% end
-% 
-% plot(trainingData(:,1)*365,trainingData(:,4)*100000);
-% plot(trainingData(:,1)*365,outputValues(:,1)*100000,'g');
+figure(2)
+hold on
+plot(error,'b-');
+hold off
