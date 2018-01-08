@@ -1,11 +1,11 @@
-testData = importdata('data\2012 Data set.csv',',');
-trainingData = importdata('data\2013 Data set.csv',',');
+testData = importdata('data\2016 Data set.csv',',');
+trainingData = importdata('data\2015 Data set.csv',',');
 
 [X,Y] = size(trainingData);
 [testX,testY] = size(testData);
-learningRate =0.3;
+learningRate =0.2;
 
-hiddenNodeSize =X/4;
+hiddenNodeSize =34;%floor(X/240);
 
 inputWeights = rand(4,hiddenNodeSize);
 inputWeights(4,:) = 1;
@@ -63,7 +63,7 @@ for epocs =1:100
     end
     
     error(epocs,1) = calculateError(trainingData,outputValues);
-    errorTest(epocs,1) = calculateError(testData,
+    errorTest(epocs,1) = calculateError(testData,outputTestValues);
     fprintf("epoc count : %d\n",epocs);
 end
 
@@ -75,4 +75,5 @@ hold off
 figure(2)
 hold on
 plot(error,'b-');
+plot(errorTest,'r-');
 hold off
