@@ -3,12 +3,12 @@ trainingData = importdata('data\2012 Data set.csv',',');
 
 [X,Y] = size(trainingData);
 [testX, testY] = size(testingData);
-num = floor(X/8);
+num = floor(X/128);
 [id,centers] = kmeans(trainingData(:,1:end-1),num);
 
 [centerX, centerY] = size(centers);
 
-sigma = 1.0;
+sigma = 0.9;
 
 %nodes = zeros(X,5);
 
