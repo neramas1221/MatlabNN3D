@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1515530819 "AINT352report.tex" "AINT352report.pdf" "AINT352report" 1515532782
+["pdflatex"] 1515536169 "AINT352report.tex" "AINT352report.pdf" "AINT352report" 1515536326
   "2016datasetplotted.jpg" 1515515025 28220 d4b232ccbdf769e017971ff76d6e0688 ""
   "2017prediction.jpg" 1515513689 33419 f99c5a31d0def252d77ec24809333649 ""
-  "AINT352report.aux" 1515530820 1110 c518732b2f37b82b6cd06bf09de6efb4 ""
-  "AINT352report.tex" 1515532781 17053 ad8af987828ae6469b39675895b60fb0 ""
+  "AINT352report.aux" 1515536170 1110 c518732b2f37b82b6cd06bf09de6efb4 ""
+  "AINT352report.tex" 1515536325 17655 cad857afb01c5177b451986076f84965 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136772254 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -68,9 +68,9 @@
   "NNfunctiontask1.jpg" 1514978894 23183 a194cb45b0ba6404781c4d017e2146ae ""
   "NNstepfunction.jpg" 1514978894 22604 16c7219180753a42bb341188cc5b6dd0 ""
   (generated)
-  "AINT352report.log"
-  "AINT352report.toc"
-  "AINT352report.lot"
-  "AINT352report.pdf"
   "AINT352report.aux"
+  "AINT352report.toc"
+  "AINT352report.pdf"
+  "AINT352report.log"
+  "AINT352report.lot"
   "AINT352reportNotes.bib"
