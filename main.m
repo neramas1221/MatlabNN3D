@@ -1,14 +1,16 @@
 testingData = importdata('data\2016 Data set.csv',',');
 trainingData = importdata('data\2012 Data set.csv',',');
+valadationData = importdata('data\2017 data set.csv',',');
 
 [X,Y] = size(trainingData);
 [testX, testY] = size(testingData);
-num = floor(X/128);
+[vX,Vy] = size(valadationData);
+num = floor(X);
 [id,centers] = kmeans(trainingData(:,1:end-1),num);
 
 [centerX, centerY] = size(centers);
 
-sigma = 0.9;
+sigma = 0.1;
 
 %nodes = zeros(X,5);
 
@@ -31,10 +33,12 @@ loopCount = 100;
 
 netOutputArray = zeros(X,1);
 netOutputTest = zeros(testX,1);
+netOutputValadation = zeros(vX,1);
 nodeRecruted =0;
 
 error = zeros(loopCount,1);
 errorTest = zeros(loopCount,1);
+errorValadation=zeros (loopCount,1);
 for dataLoop=1:4
  [trainingData,X] = changeDataset(dataLoop);
   netOutputArray = zeros(X,1);
@@ -71,10 +75,26 @@ for dataLoop=1:4
   end
 end
 
+for epoc=1:loopCount
+    for i=1:vX
+        inputs(1,1) = valadationData(i,1);
+        inputs(2,1) = valadationData(i,2);
+        inputs(3,1) = valadationData(i,3);
+        target = valadationData(i,4);
+        
+        [netoutPut,nodes] = calculateNetwork(nodes,inputs,sigma);
+        
+        netOutputValadation(i,1) = netoutPut;
+    end
+    errorValadation(epoc,1) = errorCalculation(valadationData,netOutputValadation);
+end
+
+
 figure(1)
 hold on 
 plot(error,'b-');
 plot(errorTest,'r-');
+plot(errorValadation,'g-');
 hold off
 legend('Training error','Test error')
 
@@ -89,5 +109,13 @@ figure(3)
 hold on
 plot(testingData(:,1)*365,testingData(:,4)*100000);
 plot(testingData(:,1)*365,netOutputTest(:,1)*100000,'g');
+
 hold off
 legend('Testing Target','Network Testing Output')
+
+figure(4)
+hold on
+plot(valadationData(:,1)*365,valadationData(:,4)*100000);
+plot(valadationData(:,1)*365,netOutputValadation(:,1)*100000,'g');
+hold off
+legend('Valadation Target','Network valadation Output')
