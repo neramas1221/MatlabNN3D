@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  4 JAN 2018 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  9 JAN 2018 16:26
 entering extended mode
 **./AINT352report.tex
 (AINT352report.tex
@@ -612,31 +612,52 @@ Package pdftex.def Info: NNfunctiontask1.jpg  used on input line 144.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>] [3] 
-[4
+ [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>] [3]
+<2016datasetplotted.jpg, id=23, 562.1pt x 421.575pt>
+File: 2016datasetplotted.jpg Graphic file (type jpg)
+<use 2016datasetplotted.jpg>
+Package pdftex.def Info: 2016datasetplotted.jpg  used on input line 336.
+(pdftex.def)             Requested size: 309.15596pt x 231.86696pt.
 
-]
-(AINT352report.aux) ) 
+Overfull \hbox (57.15596pt too wide) in paragraph at lines 336--339
+[] 
+ []
+
+<2017prediction.jpg, id=24, 562.1pt x 421.575pt>
+File: 2017prediction.jpg Graphic file (type jpg)
+<use 2017prediction.jpg>
+Package pdftex.def Info: 2017prediction.jpg  used on input line 350.
+(pdftex.def)             Requested size: 309.15596pt x 231.86696pt.
+
+Overfull \hbox (57.15596pt too wide) in paragraph at lines 350--353
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./2016datasetplotted.jpg> <./2017prediction.jpg>] (AINT352report.aux) ) 
 Here is how much of TeX's memory you used:
- 3187 strings out of 493308
- 46972 string characters out of 3138767
- 117820 words of memory out of 3000000
- 6704 multiletter control sequences out of 15000+200000
+ 3198 strings out of 493308
+ 47214 string characters out of 3138767
+ 117814 words of memory out of 3000000
+ 6712 multiletter control sequences out of 15000+200000
  34609 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,25p,282b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AINT352report.pdf (4 pages, 182641 bytes).
+{C:
+/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on AINT352report.pdf (4 pages, 245063 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

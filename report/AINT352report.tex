@@ -1,10 +1,10 @@
-\documentclass{IEEEtran}
+\documentclass{IEEEtran}[11pt]
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 
 \title{Using Normalised Radial Based Functions (NRBF's) to Predict Energy Consumption in the National Grid}
-\author{Connor Wheeler}
+\author{10523192}
 \date{11/01/2018}
 
 \begin{document}
@@ -263,7 +263,7 @@ best number of nodes}
   output of the network. This can have a drastic change on the performance of the network, as
   the more nodes that are there the larger the impact the hidden node will have on the final
   network output. This has some problems as the nodes in the hidden layer will all be updated
-  when the back propergation on the network takes place meaning that each node will be moved
+  when the back propagation on the network takes place meaning that each node will be moved
   slightly based on the final output. This means that the MLP can never be 100\% accurate
   as its value is shifted every time so its best on the value that it has previously seen
   \\
@@ -290,7 +290,7 @@ to see which amount of nodes would yield the best results.
 \\
 \vspace{1.5mm}
 Along with this the learning rate was changed to see how this can affect the performance of the MLP.
- 
+
 
 \end{flushleft}
 \section{Data}
@@ -327,7 +327,32 @@ Along with this the learning rate was changed to see how this can affect the per
   it would most likely hinder rather then help the network to learn. Along with this cancelation of events or events only
   running every few years e.g. the Olympics would also need to be factored in and might lead to more energy being in the
   grid then is need.
+
+  \vspace{1.5mm}
+  \begin{center}
+    2017 prediction
+  \end{center}
+  \vspace{1.5mm}
+  \includegraphics[scale = 0.55]{2016datasetplotted}
+  \vspace{1.5mm}
+  {\footnotesize figure X : error plot for the network with sigma 0.9 }
+  \\
+  \vspace{1.5mm}
+
 \end{flushleft}
 \section{results}
+\begin{flushleft}
+  \vspace{1.5mm}
+  \begin{center}
+    2017 prediction
+  \end{center}
+  \vspace{1.5mm}
+  \includegraphics[scale = 0.55]{2017prediction.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure X : error plot for the network with sigma 0.9 }
+  \\
+  \vspace{1.5mm}
+\end{flushleft}
+
 \section{conclution}
 \end{document}
