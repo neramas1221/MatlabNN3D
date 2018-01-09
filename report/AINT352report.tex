@@ -326,32 +326,54 @@ Along with this the learning rate was changed to see how this can affect the per
   This could be factored in to the network but there are so many edge cases and events that can not be predicted that
   it would most likely hinder rather then help the network to learn. Along with this cancelation of events or events only
   running every few years e.g. the Olympics would also need to be factored in and might lead to more energy being in the
-  grid then is need.
-
+  grid then is need. examples of the spikes can be seen in figure 15.
   \vspace{1.5mm}
   \begin{center}
-    2017 prediction
+    2016 Enegry consumption
   \end{center}
   \vspace{1.5mm}
-  \includegraphics[scale = 0.55]{2016datasetplotted}
+  \includegraphics[scale = 0.45]{2016datasetplotted}
   \vspace{1.5mm}
-  {\footnotesize figure X : error plot for the network with sigma 0.9 }
+  {\footnotesize figure 15 : Plot of hourly energy consumption over 2016}
   \\
   \vspace{1.5mm}
 
 \end{flushleft}
 \section{results}
 \begin{flushleft}
+  The results from the NRBF after being trained across the 2012-2015 data was
+  very interesting as the network seemed to have a better prediction then expected.
+  The network seems to over predict the amount of energy required in the national
+  grid at most of the times of year and seems to not fit the data at the bottom
+  end of the data set along with this it struggles to predict the  lower energy
+  consumption in the summer month.
+  \\
+  \vspace{1.5mm}
+  The network over predicts the energy consumption
+  at the start of the summer months around day 150 and then fails to predict the
+  lower energy periods around day 175 - 200. Along with this it seems to struggle
+  predicting the higher energy consumption that took place at the end of the year
+  around mid to late December, this may be due to the fact that 2017 might have
+  had higher energy consumption then previous December's.
   \vspace{1.5mm}
   \begin{center}
     2017 prediction
   \end{center}
   \vspace{1.5mm}
-  \includegraphics[scale = 0.55]{2017prediction.jpg}
+  \includegraphics[scale = 0.45]{2017prediction.jpg}
   \vspace{1.5mm}
-  {\footnotesize figure X : error plot for the network with sigma 0.9 }
+  {\footnotesize figure 16 : NRBF prediction of the energy consumption over the
+  year of 2016 }
   \\
   \vspace{1.5mm}
+
+  PUT ERROR PLOT HERE
+  \\
+  \vspace{5mm}
+  PUT NORMAL DATA PLOT HERE NOT VALADATION
+  \\
+  \vspace{5mm}
+  PUT TESTING PLOT HERE IF THERE IS SPACE (DO LAST)
 \end{flushleft}
 
 \section{conclution}
