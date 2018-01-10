@@ -16,9 +16,9 @@
 \newpage
 \section{Introduction}
 \begin{flushleft}
-    Training a Neural Network to predict the energy Consumptions of the national was not the easiest of tasks
-    for the network to preform. There a number of interesting occurrences in the data, the output of the network and
-    the results of the sigma optimisation and node optimisation.
+  Training a Neural Network to predict the energy Consumptions of the national was not the easiest of tasks
+  for the network to preform. There a number of interesting occurrences in the data, the output of the network and
+  the results of the sigma optimisation and node optimisation.
 \end{flushleft}
 \section{Network}
 \subsection{NRBF}
@@ -92,7 +92,7 @@ $$y=exp(-\frac{1}{2\sigma^2} \sum_{k=1}^{K}(x_{k} - w_{jk})^2) $$
 $$RMS =\sqrt{\frac{1}{M}\sum_{i=1}^{M}(y^{p}_{i} - y^{p}_{id})^2} $$
 {\footnotesize figure 5 : Root Mean Square equation for calculating the error of the network}
 \begin{center}
-Weight Update Equation
+  Weight Update Equation
 \end{center}
 \begin{flushleft}
   The weight update equation is used to adjust the weights in the hidden layer. This will allow the network to
@@ -104,21 +104,21 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
 {\footnotesize figure 6 : Weight update equation used in the NRBF}
 \subsubsection{Task 1}
 \begin{flushleft}
- For task one an NRBF was made to work on a small and evenly distributed data set, to get the understanding of the network
- and the maths correct. To make sure the network was working correctly the sigma was set to 0.01 to see the step of the
- network function. this can be seen in figure 7. This was useful as it allowed to check if the network was working and
- was covering all of the training data points with the network function.
- \vspace{1.5mm}
-\\
-\vspace{1.5mm}
-\begin{center}
-  Network function with a sigma of 0.01
-\end{center}
-\includegraphics[scale = 0.35]{NNstepfunction.jpg}
-\vspace{1.5mm}
-{\footnotesize figure 7 : Network function when sigma is 0.01 }
-\\
-\vspace{1.5mm}
+  For task one an NRBF was made to work on a small and evenly distributed data set, to get the understanding of the network
+  and the maths correct. To make sure the network was working correctly the sigma was set to 0.01 to see the step of the
+  network function. this can be seen in figure 7. This was useful as it allowed to check if the network was working and
+  was covering all of the training data points with the network function.
+  \vspace{1.5mm}
+  \\
+  \vspace{1.5mm}
+  \begin{center}
+    Network function with a sigma of 0.01
+  \end{center}
+  \includegraphics[scale = 0.35]{NNstepfunction.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 7 : Network function when sigma is 0.01 }
+  \\
+  \vspace{1.5mm}
 \end{flushleft}
 \begin{flushleft}
   Once the network was working properly, the sigma optimisation could begin to see which sigma would be best to use for the
@@ -128,42 +128,42 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   test error of all of the value tried with a error value of 0.0915. The error graph and network function graph for this sigma
   can be seen in figure 8 and 9.
   \\
-\vspace{1.5mm}
-\begin{center}
-  Error plot for a sigma of 0.9
-\end{center}
-\vspace{1.5mm}
-\includegraphics[scale = 0.35]{Errorplottask1.jpg}
-\vspace{1.5mm}
-{\footnotesize figure 8 : error plot for the network with sigma 0.9 }
-\\
-\vspace{1.5mm}
-\begin{center}
-  Network function plot for a sigma of 0.9
-\end{center}
-\includegraphics[scale = 0.35]{NNfunctiontask1.jpg}
-\vspace{1.5mm}
-{\footnotesize figure 9 : Network function when sigma is 0.9 }
-\\
-\vspace{1.5mm}
+  \vspace{1.5mm}
+  \begin{center}
+    Error plot for a sigma of 0.9
+  \end{center}
+  \vspace{1.5mm}
+  \includegraphics[scale = 0.35]{Errorplottask1.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 8 : error plot for the network with sigma 0.9 }
+  \\
+  \vspace{1.5mm}
+  \begin{center}
+    Network function plot for a sigma of 0.9
+  \end{center}
+  \includegraphics[scale = 0.35]{NNfunctiontask1.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 9 : Network function when sigma is 0.9 }
+  \\
+  \vspace{1.5mm}
 \end{flushleft}
 \begin{center}
-\begin{tabular}{||c c c||}
-  \hline
-Sigma Value & Train Error & Test Error \\ [0.5ex]
-\hline
-0.1 & 0.2733e-16 & 0.1005\\
-0.2 & 2.0126e-10 & 0.1016\\
-0.3 & 1.3562e-4 & 0.1094\\
-0.4 & 0.0131 & 0.1161 \\
-0.5 & 0.0439 & 0.1073 \\
-0.6 & 0.0632 & 0.0983\\
-0.7 & 0.0730 & 0.0933\\
-0.8 & 0.0781 & 0.0919\\
-0.9 & 0.0797 & 0.0915\\
-1.0 & 0.0800 & 0.0918\\
-\hline
-\end{tabular}
+  \begin{tabular}{||c c c||}
+    \hline
+    Sigma Value & Train Error & Test Error \\ [0.5ex]
+    \hline
+    0.1 & 0.2733e-16 & 0.1005\\
+    0.2 & 2.0126e-10 & 0.1016\\
+    0.3 & 1.3562e-4 & 0.1094\\
+    0.4 & 0.0131 & 0.1161 \\
+    0.5 & 0.0439 & 0.1073 \\
+    0.6 & 0.0632 & 0.0983\\
+    0.7 & 0.0730 & 0.0933\\
+    0.8 & 0.0781 & 0.0919\\
+    0.9 & 0.0797 & 0.0915\\
+    1.0 & 0.0800 & 0.0918\\
+    \hline
+  \end{tabular}
 \end{center}
 \vspace{1.5mm}
 {\footnotesize figure 10 : Sigma optimisation table }
@@ -203,47 +203,50 @@ Sigma Value & Train Error & Test Error \\ [0.5ex]
   The graphs for all of this can be seen in the results section of this report
 
 \end{flushleft}
+  \begin{center}
 
+
+
+    \begin{tabular}{||c c c c||}
+      \hline
+      Nodes & Best Sigma & Train Error & Test Error \\ [0.5ex]
+      \hline
+      8724 & 0.1 & 0.0165 & 0.0282 \\
+      4380 & 1 & 0.0482 & 0.0687 \\
+      2190 & 1 & 0.0482 & 0.0688 \\
+      1095 & 0.9 & 0.0472 & 0.0678\\
+      547  & 0.9 & 0.0471 & 0.0679\\
+      237  & 0.8 & 0.0446 & 0.0687\\
+      136  & 0.9 & 0.0474 & 0.0681\\
+      68   & 0.9 & 0.0475 & 0.0680\\
+      \hline
+    \end{tabular}
+    \\
+    \vspace{2.5mm}
+    {\footnotesize figure 11 : Number of nodes compared to training error and
+    test error}
+  \end{center}
 \begin{center}
-\begin{tabular}{||c c c c||}
-  \hline
-Number of Nodes & Best Sigma & Train Error & Test Error \\ [0.5ex]
-\hline
-8724 & 0.1 & 0.0165 & 0.0282 \\
-4380 & 1 & 0.0482 & 0.0687 \\
-2190 & 1 & 0.0688 & 0.0482 \\
-1095 & 1\\
-547  & 1\\
-237  & 1\\
-136  & 1\\
-68   & 1\\
-\end{tabular}
-\\
-\vspace{2.5mm}
-{\footnotesize figure 11 : Number of nodes compared to training error and
-test error}
-\end{center}
-\begin{center}
-\begin{tabular}{||c c c||}
-  \hline
-Sigma Value & Train Error & Test Error \\ [0.5ex]
-\hline
-0.1 & 0.0165 & 0.0282 \\
-0.2 & 0.0187 & 0.0334 \\
-0.3 & 0.0250 & 0.0432 \\
-0.4 & 0.0332 & 0.0701 \\
-0.5 & 0.0362 & 0.0733 \\
-0.6 & 0.0386 & 0.0747 \\
-0.7 & 0.0393 & 0.0708 \\
-0.8 & 0.0443 & 0.0695 \\
-0.9 & 0.0472 & 0.0690 \\
-1.0 & 0.0482 & 0.0686 \\
-\hline
-\end{tabular}
-\\
-\vspace{2.5mm}
-{\footnotesize figure 12 : Sigma optimisation of nodes the network based on the
-best number of nodes}
+  \begin{tabular}{||c c c||}
+    \hline
+    Sigma Value & Train Error & Test Error \\ [0.5ex]
+    \hline
+    0.1 & 0.0165 & 0.0282 \\
+    0.2 & 0.0187 & 0.0334 \\
+    0.3 & 0.0250 & 0.0432 \\
+    0.4 & 0.0332 & 0.0701 \\
+    0.5 & 0.0362 & 0.0733 \\
+    0.6 & 0.0386 & 0.0747 \\
+    0.7 & 0.0393 & 0.0708 \\
+    0.8 & 0.0443 & 0.0695 \\
+    0.9 & 0.0472 & 0.0690 \\
+    1.0 & 0.0482 & 0.0686 \\
+    \hline
+  \end{tabular}
+  \\
+  \vspace{2.5mm}
+  {\footnotesize figure 12 : Sigma optimisation of nodes the network based on the
+  best number of nodes}
 \end{center}
 \subsection{MLP}
 \subsubsection{Task 2}
@@ -268,26 +271,29 @@ best number of nodes}
   \vspace{1.5mm}
   The sigmod activation equation can be seen in the figure 13
 
-$$y_i=\frac{1}{1+exp(-z_i)}$$
-\\
-\vspace{1.5mm}
-{\footnotesize figure 13 : Sigmod activation function used in the MLP}
-\\
-\vspace{1.5mm}
-When updating the weights in the network the delta rule is used to update all of
-the weights in the network. the equation for this can be seen in figure 14.
-$$W \leftarrow W  + \alpha*(y_i,_d - y_i)$$
-{\footnotesize figure 14 : Delta rule weight update equation where $\alpha$ is the learning
-rate}
-\\
-\vspace{1.5mm}
+  $$y_i=\frac{1}{1+exp(-z_i)}$$
+  \\
+  \vspace{1.5mm}
+  {\footnotesize figure 13 : Sigmod activation function used in the MLP}
+  \\
+  \vspace{1.5mm}
+  When updating the weights in the network the delta rule is used to update all of
+  the weights in the network. the equation for this can be seen in figure 14.
+  $$W \leftarrow W  + \alpha*(y_i,_d - y_i)$$
+  {\footnotesize figure 14 : Delta rule weight update equation where $\alpha$ is the learning
+  rate}
+  \\
+  \vspace{1.5mm}
 
-To optimise this network the max number of nodes was used and records of the error on training
-and testing data was monitored and the number of nodes was slowly decreased over different tests
-to see which amount of nodes would yield the best results.
-\\
-\vspace{1.5mm}
-Along with this the learning rate was changed to see how this can affect the performance of the MLP.
+  To optimise this network the max number of nodes was used and records of the error on training
+  and testing data was monitored and the number of nodes was slowly decreased over different tests
+  to see which amount of nodes would yield the best results. From this the best amount of nodes
+  for the MLP where in the range of 30-40 as these all had the same error value of 0.0646.s
+  \\
+  \vspace{1.5mm}
+  Along with this the learning rate was changed to see how this can affect the
+  performance of the MLP. This lead to some improvement in the network performance
+  but still did not out preformed the NRBF network.
 
 
 \end{flushleft}
@@ -326,11 +332,7 @@ Along with this the learning rate was changed to see how this can affect the per
   running every few years e.g. the Olympics would also need to be factored in and might lead to more energy being in the
   grid then is need. examples of the spikes can be seen in figure 15.
   \vspace{1.5mm}
-  \begin{center}
-    2016 Enegry consumption
-  \end{center}
-  \vspace{1.5mm}
-  \includegraphics[scale = 0.45]{2016datasetplotted}
+  \includegraphics[width = 0.45\textwidth]{2016datasetplotted}
   \vspace{1.5mm}
   {\footnotesize figure 15 : Plot of hourly energy consumption over 2016}
   \\
@@ -354,45 +356,52 @@ Along with this the learning rate was changed to see how this can affect the per
   around mid to late December, this may be due to the fact that 2017 might have
   had higher energy consumption then previous December's.
   \vspace{1.5mm}
-  \begin{center}
-    2017 prediction
-  \end{center}
-  \vspace{1.5mm}
-  \includegraphics[scale = 0.45]{2017prediction.jpg}
+  \includegraphics[width = 0.45\textwidth]{2017prediction.jpg}
   \vspace{1.5mm}
   {\footnotesize figure 16 : NRBF prediction of the energy consumption over the
   year of 2017 }
   \\
   \vspace{1.5mm}
 
- To achive even better results the network could of been tested across 2dp sigmas
- to see how this would affect the over all prediction that the network would
- make in the end. Along with this learning rates could be changed and tested to
- see how the network would change in term of its final prediction.
- \\
- \vspace{1.5mm}
-
-  PUT ERROR PLOT HERE
+  To achieve even better results the network could of been tested across 2dp sigmas
+  to see how this would affect the over all prediction that the network would
+  make in the end. Along with this learning rates could be changed and tested to
+  see how the network would change in term of its final prediction.
   \\
-  \vspace{5mm}
-  PUT NORMAL DATA PLOT HERE NOT VALADATION
+  \vspace{1.5mm}
+  While testing the network a plot of the network function was made to see how
+  the network was fitting the data set. This showed the network was over fitting
+  to the data set that it was using, but still yielded the best results across
+  all of the node and sigma optimisation that was preformed. Along with this the
+  network seemed to still have not learned the peaks that occur in the data set
+  reinforcing the idea the network could not learn this data easily.
   \\
-  \vspace{5mm}
-  PUT TESTING PLOT HERE IF THERE IS SPACE (DO LAST)
+  \space{1.5mm}
+  \includegraphics[width = 0.45\textwidth]{errorPrediction.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 17 : Error plot of the network on training data, test data
+  and validation data.
+  year of 2017 }
+  \\
+  \vspace{1.5mm}
+  \includegraphics[width = 0.45\textwidth]{predictiontrainingdata.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 18 : Plot of the network output on training data set }
+  \\
 \end{flushleft}
 
 \section{conclution}
 \begin{flushleft}
- With all the information and results gather through out this project it shows
- how an NRBF networks can be used to forcast futuer events with enough data and
- traning. The results are not perfect, but they seem to out proform MLP's on the
- same type of task. To improve the network througher more sigma optimisation
- could be carried out to try and get a sigma to 2dp, as this could greatly incress
- the profomance of the network. If there was more time and the task could be
- moved to parrallel computation methods then testing each sigma value from 0.1
- - 1 could also be carried out more to work out the average accross 100 trials to
- help conferm the results of the best sigma and nodes.
- \\
- \vspace{1.5mm}
+  With all the information and results gather through out this project it shows
+  how an NRBF networks can be used to forecast future events with enough data and
+  training. The results are not perfect, but they seem to out preform MLP's on the
+  same type of task. To improve the network further more sigma optimisation
+  could be carried out to try and get a sigma to 2dp, as this could greatly increase
+  the performance of the network. If there was more time and the task could be
+  moved to parallel computation methods then testing each sigma value from 0.1
+  - 1 could also be carried out more to work out the average across 100 trials to
+  help conform the results of the best sigma and nodes.
+  \\
+  \vspace{1.5mm}
 \end{flushleft}
 \end{document}

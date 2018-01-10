@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  9 JAN 2018 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.20)  10 JAN 2018 19:47
 entering extended mode
 **./AINT352report.tex
 (AINT352report.tex
@@ -612,54 +612,55 @@ Package pdftex.def Info: NNfunctiontask1.jpg  used on input line 144.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>]
-Overfull \hbox (7.51839pt too wide) in paragraph at lines 208--221
- [] 
- []
-
-[3]
+ [2 <./NNstepfunction.jpg> <./Errorplottask1.jpg> <./NNfunctiontask1.jpg>] [3]
 <2016datasetplotted.jpg, id=23, 562.1pt x 421.575pt>
 File: 2016datasetplotted.jpg Graphic file (type jpg)
 <use 2016datasetplotted.jpg>
-Package pdftex.def Info: 2016datasetplotted.jpg  used on input line 333.
-(pdftex.def)             Requested size: 252.94266pt x 189.70699pt.
-
-Overfull \hbox (0.94266pt too wide) in paragraph at lines 333--336
-[] 
- []
-
+Package pdftex.def Info: 2016datasetplotted.jpg  used on input line 335.
+(pdftex.def)             Requested size: 232.19843pt x 174.14627pt.
 <2017prediction.jpg, id=24, 562.1pt x 421.575pt>
 File: 2017prediction.jpg Graphic file (type jpg)
 <use 2017prediction.jpg>
-Package pdftex.def Info: 2017prediction.jpg  used on input line 361.
-(pdftex.def)             Requested size: 252.94266pt x 189.70699pt.
+Package pdftex.def Info: 2017prediction.jpg  used on input line 359.
+(pdftex.def)             Requested size: 232.19843pt x 174.14627pt.
+<errorPrediction.jpg, id=25, 562.1pt x 421.575pt>
+File: errorPrediction.jpg Graphic file (type jpg)
+<use errorPrediction.jpg>
+Package pdftex.def Info: errorPrediction.jpg  used on input line 380.
+(pdftex.def)             Requested size: 232.19843pt x 174.14627pt.
+<predictiontrainingdata.jpg, id=26, 562.1pt x 421.575pt>
+File: predictiontrainingdata.jpg Graphic file (type jpg)
+<use predictiontrainingdata.jpg>
+Package pdftex.def Info: predictiontrainingdata.jpg  used on input line 387.
+(pdftex.def)             Requested size: 232.19843pt x 174.14627pt.
 
-Overfull \hbox (0.94266pt too wide) in paragraph at lines 361--365
-[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[4 <./2016datasetplotted.jpg> <./2017prediction.jpg>] (AINT352report.aux) ) 
+ [4 <./2016datasetplotted.jpg> <./2017prediction.jpg> <./errorPrediction.jpg>] 
+[5
+
+ <./predictiontrainingdata.jpg>] (AINT352report.aux) ) 
 Here is how much of TeX's memory you used:
- 3198 strings out of 493308
- 47214 string characters out of 3138767
- 120814 words of memory out of 3000000
- 6712 multiletter control sequences out of 15000+200000
+ 3208 strings out of 493308
+ 47477 string characters out of 3138767
+ 121814 words of memory out of 3000000
+ 6720 multiletter control sequences out of 15000+200000
  34609 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,25p,282b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/
-Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AINT352report.pdf (4 pages, 246462 bytes).
+{C:/Program Files/MiKTeX 
+2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on AINT352report.pdf (5 pages, 293009 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

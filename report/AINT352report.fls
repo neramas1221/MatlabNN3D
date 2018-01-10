@@ -156,6 +156,16 @@ INPUT ./2017prediction.jpg
 INPUT ./2017prediction.jpg
 INPUT ./2017prediction.jpg
 INPUT ./2017prediction.jpg
+INPUT errorPrediction.jpg
+INPUT ./errorPrediction.jpg
+INPUT ./errorPrediction.jpg
+INPUT ./errorPrediction.jpg
+INPUT ./errorPrediction.jpg
+INPUT predictiontrainingdata.jpg
+INPUT ./predictiontrainingdata.jpg
+INPUT ./predictiontrainingdata.jpg
+INPUT ./predictiontrainingdata.jpg
+INPUT ./predictiontrainingdata.jpg
 INPUT AINT352report.aux
 INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
