@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
-
+\raggedbottom
 \title{Using Normalised Radial Based Functions (NRBF's) to Predict Energy Consumption in the National Grid}
 \author{10523192}
 \date{11/01/2018}
@@ -16,19 +16,23 @@
 \newpage
 \section{Introduction}
 \begin{flushleft}
-  Training a Neural Network to predict the energy Consumptions of the national was not the easiest of tasks
-  for the network to preform. There a number of interesting occurrences in the data, the output of the network and
-  the results of the sigma optimisation and node optimisation.
+  Neural network used to forecast future events are very import and useful to
+  modern life and computer science. Using these tool we can a good idea of
+  future event and what effect it might have later on. For this paper an NRBF
+  network will be used to try and predict energy consumption in the national grid
+  for the year of 2017.
 \end{flushleft}
 \section{Network}
 \subsection{NRBF}
 \begin{flushleft}
-  Normalised Radial Based Functions (NRBF) work by using the activation of all nodes in the hidden
-  layer to work out the output of the network. This is done by using the Gaussian activation function
-  of the nodes in the hidden layer, to work out how active the node is when a value is passed to it.
-  if a node is very then its activation value will be one or very close to one, where as an inactive
-  node will be much closer to zero. The activation of all of the nodes is later used to work out what
-  the output of the net work will be.
+  Normalised Radial Based Functions (NRBF) networks work by using the activation
+  of all nodes in the hidden layer to work out the output of the network. This
+  is done by using the Gaussian activation function of the nodes in the hidden
+  layer, to work out how active each node is when a value is passed to that
+  node in the hidden layer. If a node is very active then its activation value
+  will be one or very close to one, where as an inactive node will be much
+  closer to zero. The activation of all of the nodes is later used to work out
+  what the output of the network will be.
 \end{flushleft}
 
 \begin{flushleft}
@@ -45,8 +49,8 @@
   {\footnotesize figure 1 : sum of all node activations multiplied by weights of all nodes}
 
   \vspace{3mm}
-  After this the total sum of all node activations is calculated and summed. The equation for this
-  can be seen figure 2.
+  After this the total sum of all node activations is calculated and summed.
+  The equation for this can be seen figure 2.
 
   \vspace{3mm}
 
@@ -57,8 +61,10 @@
   {\footnotesize figure 2 : sum of all node activations}
   \\
   \vspace{3mm}
-  When these have been calculated the 2 values are divided. to get the final output from the
-  hidden layer. The whole equation can been seen in figure 3.
+  When these have been calculated the 2 values are divided. to get the final
+  output from the hidden layer. Then these values are passed to the output layer
+  and the final network output is stored.
+  The whole equation can been seen in figure 3.
 
   \vspace{3mm}
 
@@ -77,8 +83,10 @@
   Node Activation Equation
 \end{center}
 \begin{flushleft}
-  The node activation equation is used to calculated the activation of the node. if the value before
-  the exponential is calculated is 0 then the activation of the node will be 1.
+  The node activation equation is used to calculated how activation a node in
+  the hidden layer is when being given a set of inputs. If the value before
+  the exponential is calculated is 0 then the activation value of the node
+  will be 1. This equation can be seen in figure 4.
 \end{flushleft}
 $$y=exp(-\frac{1}{2\sigma^2} \sum_{k=1}^{K}(x_{k} - w_{jk})^2) $$
 {\footnotesize figure 4 : Gaussian activation equation for NRBF nodes}
@@ -86,8 +94,9 @@ $$y=exp(-\frac{1}{2\sigma^2} \sum_{k=1}^{K}(x_{k} - w_{jk})^2) $$
   Root Mean Squar Equation
 \end{center}
 \begin{flushleft}
-  The Root Mean Square equation is used to calculated how incorrect the network was with its output. This was
-  used to compare different sigma's to see which has preformed the best on the testing data set.
+  The Root Mean Square equation is used to calculated how the network preformed
+  on the data sets it was being shown. This value can then be used to determine
+  the best number of nodes and best sigma values for the network.
 \end{flushleft}
 $$RMS =\sqrt{\frac{1}{M}\sum_{i=1}^{M}(y^{p}_{i} - y^{p}_{id})^2} $$
 {\footnotesize figure 5 : Root Mean Square equation for calculating the error of the network}
@@ -95,53 +104,51 @@ $$RMS =\sqrt{\frac{1}{M}\sum_{i=1}^{M}(y^{p}_{i} - y^{p}_{id})^2} $$
   Weight Update Equation
 \end{center}
 \begin{flushleft}
-  The weight update equation is used to adjust the weights in the hidden layer. This will allow the network to
-  become more accurate over time as the weights get adjusted more and more, as the network becomes more accurate
-  these adjustments become smaller. To do this the old weight is added to using the learning rate ($\alpha$) multiplied
-  by the target value - the networks output, multiplied by the activation of the node ($\phi$).
+  The weight update equation is used to adjust the weights of the nodes in the
+  hidden layer.
+  This will allow the network to become more accurate over time as the weights
+  get adjusted closer to there optimal values, as the network becomes more
+  accurate these adjustments become smaller. To do this the old weight is
+  added to using the learning rate ($\alpha$) multiplied by the target value
+  - the networks output, this is then multiplied by the activation of the node
+  ($\phi$).
 \end{flushleft}
 $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
 {\footnotesize figure 6 : Weight update equation used in the NRBF}
+
 \subsubsection{Task 1}
 \begin{flushleft}
-  For task one an NRBF was made to work on a small and evenly distributed data set, to get the understanding of the network
-  and the maths correct. To make sure the network was working correctly the sigma was set to 0.01 to see the step of the
-  network function. this can be seen in figure 7. This was useful as it allowed to check if the network was working and
-  was covering all of the training data points with the network function.
+  For task one an NRBF was made to work on a small and evenly distributed data
+  set, to get the understanding of the network and the maths that would be used.
+  To make sure the network was working correctly the sigma was set to 0.01 to
+  see the step of the network function. This can be seen in figure 7. This was
+  useful as it allowed to check if the network was working and was covering all
+  of the training data points with the network function.
   \vspace{1.5mm}
   \\
-  \vspace{1.5mm}
-  \begin{center}
-    Network function with a sigma of 0.01
-  \end{center}
-  \includegraphics[scale = 0.35]{NNstepfunction.jpg}
+  \includegraphics[width = 0.45\textwidth]{NNstepfunction.jpg}
+  \\
   \vspace{1.5mm}
   {\footnotesize figure 7 : Network function when sigma is 0.01 }
   \\
   \vspace{1.5mm}
-\end{flushleft}
-\begin{flushleft}
-  Once the network was working properly, the sigma optimisation could begin to see which sigma would be best to use for the
-  network. To do this the network was run over the data set 100 times and then the final test and train error where taken and
-  stored. This allowed for the best value on the testing data to be found. The sigma was tested between 0.1 - 1 and the table
-  of results can be seen in figure 10. The best sigma value that could be found from this testing was 0.9 as it had the lowest
-  test error of all of the value tried with a error value of 0.0915. The error graph and network function graph for this sigma
+  Once the network was working properly, the sigma optimisation could begin to
+  see which sigma would be best to use for the network. To do this the network
+  was run over the data set 100 times and then the best test and train error
+  where taken and stored. This allowed for the best value on the testing data to
+  be found. The sigma was tested between 0.1 - 1 and the table of results can be
+  seen in figure 10. The best sigma value that could be found from this testing
+  was 0.9 as it had the lowest test error of all of the value tried with a error
+  value of 0.0915. The error graph and network function graph for this sigma
   can be seen in figure 8 and 9.
   \\
   \vspace{1.5mm}
-  \begin{center}
-    Error plot for a sigma of 0.9
-  \end{center}
-  \vspace{1.5mm}
-  \includegraphics[scale = 0.35]{Errorplottask1.jpg}
+  \includegraphics[width = 0.45\textwidth]{Errorplottask1.jpg}
   \vspace{1.5mm}
   {\footnotesize figure 8 : error plot for the network with sigma 0.9 }
   \\
   \vspace{1.5mm}
-  \begin{center}
-    Network function plot for a sigma of 0.9
-  \end{center}
-  \includegraphics[scale = 0.35]{NNfunctiontask1.jpg}
+  \includegraphics[width = 0.45\textwidth]{NNfunctiontask1.jpg}
   \vspace{1.5mm}
   {\footnotesize figure 9 : Network function when sigma is 0.9 }
   \\
@@ -172,27 +179,34 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
 \subsubsection{Tast 2}
 
 \begin{flushleft}
-  For task 2 a NRBF that could predict the output of the national grid need to be made.
-  This network would be much larger and more complex then the first one due to the fact that more
-  data points would exist. When first creating and testing the network a node was used for each
-  data point to check that every thing was working correctly, but this was not the best practice
-  as some data points where very similar and could fit under one NRBF node.
+  For task 2 a NRBF that could predict the output of the national grid need to
+  be made. This network would be much larger and more complex then the first one
+  due to the fact that more data points would exist. When first creating and
+  testing the network a node was used for each data point to check that every
+  thing was working correctly, but this was not the best practice as some data
+  points where very similar and could fit under one NRBF node.
   \\
   \vspace{2.5mm}
-  So to lower the amount of nodes used in the hidden layer but still ensure that the nodes where
-  evenly distributed K-means clustering was use to separate the data in to sets of clusters and then
-  create the nodes. This meant that the number of nodes used would always be able cover the whole data set.
-  This then allowed for testing in the form of node optimisation and sigma optimisation to get a much more
-  efficient network. To get the number of nodes the total size of the data set is divided by a set number
-  and that many nodes centres are then created. These node centres then used to set the centres of each node.
-  As this network is a 3 dimensional network each node will be given 3 centres and have 3 input weight.
+  So to lower the amount of nodes used in the hidden layer but still ensure
+  that the nodes where evenly distributed K-means clustering was use to separate
+  the data in to sets of clusters and then create the node centres. This meant
+  that the number of nodes used would always be able cover the whole data set.
+  This then allowed for testing in the form of node optimisation and sigma
+  optimisation to get a much more efficient network. To get the number of nodes
+  the total size of the data set is divided by a set number and that many nodes
+  centres are then created. These node centres then used to set the centres of
+  each node. As this network is a 3 dimensional network each node will be given
+  3 centres and have 3 input weight.
   \\
   \vspace{2.5mm}
-  After the nodes have been created the input values are looped through by the network and each one is tested.
-  After a data point has been tested the weights are updated and another data point is tested, after all the data point
-  have been tested another epoc is run going through the data points again. This is done 100 times to allow
-  for the larger sigma's to be trained by the network. The years 2012-2015 are used to train the network then the 2016
-  data set is used for testing the network. 2017 data set is used to validate the network performance.
+  After the nodes have been created the input values are looped through by the
+  network and each one is tested. After a data point has been passed through the
+  network the weights are updated and another data point is passed through the
+  network, after all the data point have been tested another epoc is run going
+  through the data points again. This is done 100 times to allow for the larger
+  sigma's to be trained by the network. The years 2012-2015 are used to train
+  the network then the 2016 data set is used for testing the network. 2017 data
+  set is used to validate the network performance.
   \\
   \vspace{2.5mm}
   The network was trained across all of the training sets to allow for the network to be trained on all of the data
@@ -201,12 +215,25 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   \\
   \vspace{1.5mm}
   The graphs for all of this can be seen in the results section of this report
-
+  \\
+  \vspace{1.5mm}
+  When optimising the network a number of different nodes and sigmas where
+  tested to achieve the best possible value for the final network. this was done
+  by testing each node combination chosen on each sigma value between 0.1 - 1.
+  This allowed for each sigma to be collected and then compared, the best sigmas
+  for each node combination chosen can be seen in figure 11.
+  \\
+  \vspace{1.5mm}
+  From doing this the optimal nodes seemed to be 8724 which is very close to 1
+  node per data point in the data set, then the optimal sigma value was 0.1 as
+  it had the lowest test error of any of the sigmas this can be seen in
+  figure 12. After the optimal amount of nodes and sigma was found the network
+  was passed the validation data to see what the networks prediction would look
+  like.
+  \\
+  \vspace{1.5mm}
 \end{flushleft}
   \begin{center}
-
-
-
     \begin{tabular}{||c c c c||}
       \hline
       Nodes & Best Sigma & Train Error & Test Error \\ [0.5ex]
@@ -225,6 +252,8 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
     \vspace{2.5mm}
     {\footnotesize figure 11 : Number of nodes compared to training error and
     test error}
+    \\
+    \vspace{2.5mm}
   \end{center}
 \begin{center}
   \begin{tabular}{||c c c||}
@@ -257,19 +286,19 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   part of the final output. To get an output value from the network the sigmod activation
   is calculated from the input to the hidden layer. Then the hidden layer sigmod activation
   is calculated and passed to the output layer, where the total activation of all hidden
-  nodes is calculated leading to the network output.
+  nodes is calculated leading to the network output. The sigmod activation
+  equation can be seen in the figure 13.
   \\
   \vspace{1.5mm}
-  To optimise the MLP the number of nodes can be changed to see how this affects the overall
-  output of the network. This can have a drastic change on the performance of the network, as
-  the more nodes that are there the larger the impact the hidden node will have on the final
-  network output. This has some problems as the nodes in the hidden layer will all be updated
-  when the back propagation on the network takes place meaning that each node will be moved
-  slightly based on the final output. This means that the MLP can never be 100\% accurate
-  as its value is shifted every time so its best on the value that it has previously seen
-  \\
-  \vspace{1.5mm}
-  The sigmod activation equation can be seen in the figure 13
+  To optimise the MLP the number of nodes can be changed to see how this affects
+  the overall output of the network. This can have a drastic change on the
+  performance of the network, as the more nodes that are there the larger the
+  impact the hidden node will have on the final network output. This has some
+  problems as the nodes in the hidden layer will all be updated when the back
+  propagation on the network takes place meaning that each node will be moved
+  slightly based on the final output. This means that the MLP can never be 100\%
+  accurate as its value is shifted every time so its best on the value that it
+  has previously seen.
 
   $$y_i=\frac{1}{1+exp(-z_i)}$$
   \\
@@ -278,63 +307,127 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   \\
   \vspace{1.5mm}
   When updating the weights in the network the delta rule is used to update all of
-  the weights in the network. the equation for this can be seen in figure 14.
+  the weights in the network. This works by taking the weight value and adding
+  the learning rate multiplied by the target value take the networks out put.
+   the equation for this can be seen in figure 14.
   $$W \leftarrow W  + \alpha*(y_i,_d - y_i)$$
   {\footnotesize figure 14 : Delta rule weight update equation where $\alpha$ is the learning
   rate}
   \\
   \vspace{1.5mm}
 
-  To optimise this network the max number of nodes was used and records of the error on training
-  and testing data was monitored and the number of nodes was slowly decreased over different tests
-  to see which amount of nodes would yield the best results. From this the best amount of nodes
-  for the MLP where in the range of 30-40 as these all had the same error value of 0.0646.s
+  To optimise this network the max number of nodes was used and records of the
+  error on training and testing data was monitored and the number of nodes was
+  slowly decreased over different tests to see which amount of nodes would yield
+  the best results. From this the best amount of nodes for the MLP where in the
+  range of 30-40 as these all had the same error value of 0.0577 with a learning
+  rate of 0.01.
   \\
   \vspace{1.5mm}
   Along with this the learning rate was changed to see how this can affect the
-  performance of the MLP. This lead to some improvement in the network performance
-  but still did not out preformed the NRBF network.
+  performance of the MLP. This lead to a large improvement in the network
+  performance but still did not out preformed the NRBF network. The MLP seems to
+  be able to get it's output values around the right values but is still very
+  far off the correct answer.
+  \\
+  \vspace{1.5mm}
+  From looking at the node and learning rate optimise tables in figure 15 \& 16
+  it shows that the best number of nodes and learning rates are 31 nodes with a
+  learning rate ($\alpha$) 0f 0.01. This node and learning rate values where
+  found after testing the learning rate of 0.2 but found this to be to high, so
+  a range of values between 0.1- 0.01 where tested on these number of nodes
+  to see how this affected the networks output. The prediction from the MLP can
+  be seen in the Results section of the report.
 
-
+  \begin{center}
+    \begin{tabular}{||c c c||}
+      \hline
+      Nodes & $\alpha $ & Test Error \\ [0.5ex]
+      \hline
+      1000 & 0.05 & 0.0631 \\
+      500 & 0.01 &  0.0609 \\
+      250 & 0.01 & 0.0614 \\
+      125 & 0.01 & 0.0586\\
+      62  & 0.05 & 0.0634\\
+      31  & 0.01 & 0.0577\\
+      \hline
+    \end{tabular}
+    \\
+    \vspace{2.5mm}
+    {\footnotesize figure 15 : best learning rate for each node amount tested on
+    the MLP}
+    \\
+    \vspace{2.5mm}
+  \end{center}
+\begin{center}
+  \begin{tabular}{||c c c||}
+    \hline
+    Nodes & $\alpha $  & Test Error \\ [0.5ex]
+    \hline
+    1000 & 0.01 & 0.0660 \\
+    500 & 0.01 &  0.0609 \\
+    250 & 0.01 & 0.0614 \\
+    125 & 0.01 & 0.0586\\
+    62  & 0.01 & 0.0650\\
+    31  & 0.01 & 0.0577\\
+    \hline
+  \end{tabular}
+  \\
+  \vspace{2.5mm}
+  {\footnotesize figure 16 : all node test error after the best learning rate
+  had been identified}
+\end{center}
 \end{flushleft}
 \section{Data}
 \subsection{Data processing methods}
 \begin{flushleft}
-  For the network to use the data the average demand over each hour was taken and stored
-  along with the day of the year, hour of day and the day of the week. This data was then
-  normalised to be used in the network, to normalised the day the value would be divided by
-  365. For example the first day of the year would be $1 / 365$. To normalised the hour the
-  hour of the day was taken and then divided by 24. Finally the day of the week was divided
-  by 7 to get a normalised set of numbers between 0 and 1.
+  along with the day of the year, hour of day and the day of the week. This data
+  was then normalised to be used in the network, to normalised the day the value
+  would be divided by 365. For example the first day of the year would be
+  $1 / 365$. To normalised the hour of the day was taken and then divided by 24
+  to get the normalised value. Finally the day of the week was divided by 7 to
+  get a normalised set of numbers between 0 and 1. The data was then set up in
+  the file to be in the format of : Day of year, Hour of day , Day of week,
+  Arrearage demand
   \\
   \vspace{1.5mm}
-  Along with this the data processing could not factor in some of the data in the network, like
-  the large spikes that occur from time to time and the leap years that also occur. These could
-  of been factor in but then would also would of need to be factored in to the network when training
-  leading to more problems.
+  Along with this the data processing could not factor in some of the data in
+  the file, like the large spikes that occur from time to time and the leap
+  years that also occur. These could of been factor in but then would also would
+  of need to be factored in to the network when training leading to more problems.
 \end{flushleft}
 \subsection{Problems with the data}
 \begin{flushleft}
-  When processing the data there was a large array of problems that occurred. Some of the years of data where not
-  complete and where missing entries over the year. Along with this the data reading where not always evenly sampled
-  meaning some reading are very close to other where as others are very spaced apart. This is a very large problem when
-  it comes to training to make the network as accurate as possible as the data might not reflect the height demands that
-  could of occurred during the time of the reading. Along with this the data is sampled every 5 minutes, so to make the
-  network as accurate as possible data would need to be taken more frequently and used to train the network.
+  When processing the data there was a large array of problems that occurred.
+  Some of the years of data where not complete and where missing entries over
+  the year, 2016 even contained reading that where abnormally low. This was most
+  likely a miss reading or problem with the equipment that is used for the
+  reading but this will still cause massive problems for network when it
+  comes training. Along with this the data reading where not always evenly sampled
+  meaning some reading are very close to other where as others are very spaced apart.
+  This is a very large problem when it comes to training to make the network as
+  accurate as possible as the data might not reflect the height demands that
+  could of occurred during the time of the reading. Along with this the data is
+  sampled every 5 minutes, so to make the network as accurate as possible data
+  would need to be taken more frequently and used to train the network.
   \\
   \vspace{1.5mm}
-  Along with this some years will be leap years leading to the problem of there being 1 extra day for the network to
-  learn that is not consistently there. This could be factored in to the network but would most likely only make a miner
-  changer to the networks performance. Along with this there are spikes in the data where large world events had taken
-  place or large sports events had taken place, this meant that more power was need and used as a result.
-  This could be factored in to the network but there are so many edge cases and events that can not be predicted that
-  it would most likely hinder rather then help the network to learn. Along with this cancelation of events or events only
-  running every few years e.g. the Olympics would also need to be factored in and might lead to more energy being in the
-  grid then is need. examples of the spikes can be seen in figure 15.
+  With some years be leap years this leads to the problem of there being 1
+  extra day for the network to learn that is not consistently there every year.
+  This could be factored in to the network but would most likely only make a
+  miner changer to the networks performance. Along with this there are spikes in
+  the data where large world events had taken place or large sports events had
+  taken place, this meant that more power was need and used as a result.
+  This could be factored in to the network but there are so many edge cases and
+  events that can not be predicted that it would most likely hinder rather then
+  help the network to learn. Along with this cancelation of events or events only
+  running every few years e.g. the Olympics would also need to be factored in
+  and might lead to more energy being in the grid then is need. examples of the
+  spikes can be seen in figure 17.
   \vspace{1.5mm}
   \includegraphics[width = 0.45\textwidth]{2016datasetplotted}
   \vspace{1.5mm}
-  {\footnotesize figure 15 : Plot of hourly energy consumption over 2016}
+  {\footnotesize figure 17 : Plot of hourly energy consumption over 2016}
   \\
   \vspace{1.5mm}
 
@@ -358,14 +451,14 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   \vspace{1.5mm}
   \includegraphics[width = 0.45\textwidth]{2017prediction.jpg}
   \vspace{1.5mm}
-  {\footnotesize figure 16 : NRBF prediction of the energy consumption over the
+  {\footnotesize figure 18 : NRBF prediction of the energy consumption over the
   year of 2017 }
   \\
   \vspace{1.5mm}
 
   To achieve even better results the network could of been tested across 2dp sigmas
   to see how this would affect the over all prediction that the network would
-  make in the end. Along with this learning rates could be changed and tested to
+  make in the end. Also the learning rates could be changed and tested to
   see how the network would change in term of its final prediction.
   \\
   \vspace{1.5mm}
@@ -379,15 +472,45 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   \space{1.5mm}
   \includegraphics[width = 0.45\textwidth]{errorPrediction.jpg}
   \vspace{1.5mm}
-  {\footnotesize figure 17 : Error plot of the network on training data, test data
+  {\footnotesize figure 18 : Error plot of the network on training data, test data
   and validation data.
   year of 2017 }
   \\
   \vspace{1.5mm}
   \includegraphics[width = 0.45\textwidth]{predictiontrainingdata.jpg}
   \vspace{1.5mm}
-  {\footnotesize figure 18 : Plot of the network output on training data set }
+  {\footnotesize figure 19 : Plot of the network output on training data set }
   \\
+  \vspace{1.5mm}
+
+  The results from the MLP are no where near as accurate as the NRBF result
+  the MLP seemed to not be able to see the different in energy fluctuation
+  in the data set and only trends downwards over the year. This again shows
+  that this type of network is not suited for forecasting type tasks. The
+  prediction of the MLP can be seen in figure 20.
+  \\
+  \vspace{1.5mm}
+  \includegraphics[width = 0.45\textwidth]{MLPprediction.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 20 : MLP prediction }
+  \\
+  \vspace{1.5mm}
+  Comparing the Prediction to the network function, they are both very similar
+  and seem to be just a larger network function. This helps to show that the
+  network is not over fitting like the NRBF which might be contributing to the
+  fact that its prediction is not as good. Along with this you can see how the
+  network seems to be preforming worse on the validation data as the epocs go on
+  while the train and test error trend down ward. This can be seen in figure 21.
+  \\
+  \vspace{1.5mm}
+  \includegraphics[width = 0.45\textwidth]{MLPerrorPlot.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 21 : MLP error plot }
+  \\
+  \vspace{1.5mm}
+  \includegraphics[width = 0.45\textwidth]{MLPNetworkFunction.jpg}
+  \vspace{1.5mm}
+  {\footnotesize figure 22 : MLP Network function }
 \end{flushleft}
 
 \section{conclution}
@@ -400,7 +523,8 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   the performance of the network. If there was more time and the task could be
   moved to parallel computation methods then testing each sigma value from 0.1
   - 1 could also be carried out more to work out the average across 100 trials to
-  help conform the results of the best sigma and nodes.
+  help conform the results of the best sigma and nodes. This would also allow
+  for testing across larger epoc amounts.
   \\
   \vspace{1.5mm}
 \end{flushleft}

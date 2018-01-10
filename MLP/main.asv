@@ -80,42 +80,38 @@ for epocs =1:100
     end
     % loops over the valadation data set 
      for i=1:vX
-        % loads in the valadation data 
         inputs(1,1) = valadationData(i,1);
         inputs(2,1) = valadationData(i,2);
         inputs(3,1) = valadationData(i,3);
-        % off set
+        % off set for the bias node
         inputs(4,1) = 1;
-        % gets the target value
         target = valadationData(i,4);
-        % calculates the network output
+        
         [inputLayerUpdate,outputLayerUpdate,output] = calculateOutput...
         (inputLayer,inputs,outputLayer,target);
-        % stores the network output
+    
         netOutputValadation(i,1) = output;
     end
-    % calculates the error of the network
+    
     error(epocs,1) = calculateError(trainingData,outputValues);
     errorTest(epocs,1) = calculateError(testData,outputTestValues);
     errorValadation(epocs,1) = calculateError(valadationData,netOutputValadation);
     fprintf("epoc count : %d\n",epocs);
 end
 end
-% plot the network function
+
 figure(1)
 hold on
 plot(trainingData(:,1)*365,trainingData(:,4)*100000);
 plot(trainingData(:,1)*365,outputValues(:,1)*100000,'g');
 legend('Training Data','Network Output')
 hold off
-% plots the networks prediction
 figure(2)
 hold on
 plot(valadationData(:,1)*365,valadationData(:,4)*100000);
 plot(valadationData(:,1)*365,netOutputValadation(:,1)*100000,'g');
 legend('Valadation Target','Network Output')
 hold off
-% plots the error of the network
 figure(3)
 hold on
 plot(error,'b-');
