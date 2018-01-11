@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \raggedbottom
 \title{Using Normalised Radial Based Functions (NRBF's) to Predict Energy Consumption in the National Grid}
-\author{10523192}
+\author{Student Number : 10523192}
 \date{11/01/2018}
 
 \begin{document}
@@ -209,9 +209,10 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   set is used to validate the network performance.
   \\
   \vspace{2.5mm}
-  The network was trained across all of the training sets to allow for the network to be trained on all of the data
-  available over those years and tested after each epoc. To ensure that the network was fully prepared for the
-  final validation data set.
+  The network was trained across all of the training sets to allow for the network
+  to be trained on all of the data available over those years and tested after
+  each epoc. To ensure that the network was fully prepared for the final
+  validation data set.
   \\
   \vspace{1.5mm}
   The graphs for all of this can be seen in the results section of this report
@@ -527,5 +528,24 @@ $$ W  \leftarrow W + \alpha *(target - Network output)*\phi$$
   for testing across larger epoc amounts.
   \\
   \vspace{1.5mm}
+  The data processing method that was used was not the best and could of been
+  improved on to get slightly more accurate results and data to be feed in to
+  the network. With this some more work could of been done to improve the MLP
+  and different architecture and even multiple layers could be used to improve
+  the performance of the MLP. The MLP could also of been paralysed to allow for
+  the training and optimisation of nodes and learning rates to be speed up and
+  covered across larger node amount and a larger range of learning rates.
+  \\
+  \vspace{1.5mm}
+  The NRBF can also be tested against new form of
+  networks to see how it compares to the likes of Convolutional or spikey
+  neural network, to see how it compares to there Prediction.
+  \\
+  \vspace{1.5mm}
+  Finally the network could also be trained differently to see how this affect
+  the final out come. The network could be trained using all of the data sets
+  in one go rather then having them split up over each year, and also could
+  trained using decaying learning rates as the network starts to preform better
+  on the data sets. This might help to avoid over fitting on the final data set.
 \end{flushleft}
 \end{document}
